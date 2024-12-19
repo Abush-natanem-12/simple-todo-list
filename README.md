@@ -1,70 +1,161 @@
-# Getting Started with Create React App
+Todo List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based Todo List application that allows users to add, manage, filter, and track their tasks efficiently. The app has a user-friendly interface with features to delete, complete, and view detailed task information.
 
-## Available Scripts
+Features
 
-In the project directory, you can run:
+Add Tasks: Users can create tasks with details such as task type, due date, and a custom message.
 
-### `npm start`
+View Tasks: Tasks are displayed in a preview section with options for filtering and managing tasks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Task Details: Detailed information about a selected task can be viewed, including its type, date, and message.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Mark as Completed: Tasks can be marked as completed with a simple checkbox.
 
-### `npm test`
+Delete Tasks: Tasks can be removed individually or all at once.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Filter Tasks: Tasks can be filtered by categories such as Work, Personal, Education, Birthday, and Wishlist.
 
-### `npm run build`
+Task Statistics: View statistics on total tasks, completed tasks, and deleted tasks with a completion rate percentage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clear All Tasks: Reset the application by clearing all tasks and statistics.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Application Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application consists of three main sections:
 
-### `npm run eject`
+Left Section:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contains a hero section with the app title and description.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Includes a form for adding new tasks.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Right Section:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Displays the task filter, task preview, and task details.
 
-## Learn More
+Bottom Section:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Provides task statistics and a button to clear all tasks.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Components Overview
 
-### Code Splitting
+App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The root component managing state and layout. It includes the following state variables:
 
-### Analyzing the Bundle Size
+taskList: Stores the list of tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+detail: Stores the details of the currently selected task.
 
-### Making a Progressive Web App
+filterType: Tracks the current filter applied.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+filter: Holds the filtered list of tasks.
 
-### Advanced Configuration
+openedTask: ID of the currently opened task.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+deleted and completed: Track the number of deleted and completed tasks.
 
-### Deployment
+Left
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contains:
 
-### `npm run build` fails to minify
+Hero: Displays the app title and description.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Form: A form for adding new tasks.
+
+Right
+
+Contains:
+
+TaskFilter: Buttons to filter tasks by category.
+
+TaskPreview: Displays the list of tasks with options to delete, complete, or view details.
+
+TaskDetail: Shows detailed information about a selected task.
+
+Bottom
+
+Contains:
+
+Status: Displays statistics about tasks and a button to clear all tasks.
+
+How to Use
+
+Add a Task:
+
+Fill out the form with task details (name, type, date, and message) and click "Add Task."
+
+View Tasks:
+
+Tasks will appear in the preview section.
+
+Use the filter buttons to view tasks by category.
+
+Manage Tasks:
+
+Mark a task as complete by checking the checkbox.
+
+Delete a task by clicking the delete button.
+
+View Details:
+
+Click the "Detail" button on a task to view its full details.
+
+Track Statistics:
+
+Check the bottom section for statistics on tasks.
+
+Clear All Tasks:
+
+Use the "Clear All" button to reset the application.
+
+State Management
+
+Task Addition: The handleTaskLists function adds a new task to the list.
+
+Task Deletion: The handleDeleteTasks function removes a task from the list.
+
+Task Completion: The handleCompleteTasks function marks a task as completed.
+
+Task Filtering: The handleFilter function filters tasks by the selected category.
+
+Task Details: The handleDetails function toggles the details view of a selected task.
+
+Clear All Tasks: The handleClearAll function resets the application.
+
+Styling
+
+The application is styled using the App.css file. Customize the styles in App.css to match your design preferences.
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/your-username/todo-list-app.git
+
+Navigate to the project directory:
+
+cd todo-list-app
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm start
+
+Future Improvements
+
+Add user authentication for personalized task management.
+
+Implement drag-and-drop functionality for task reordering.
+
+Integrate persistent storage (e.g., local storage or a database).
+
+Enhance the UI with animations and responsive design.
+
+License
+
+This project is licensed under the MIT License.
